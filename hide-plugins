@@ -1,0 +1,13 @@
+add_filter( 'all_plugins', 'hide_plugins');
+function hide_plugins($plugins)
+{
+	// Hide hello dolly plugin
+	if(is_plugin_active('hello.php')) {
+		unset( $plugins['hello.php'] );
+	}
+	// Hide disqus plugin
+	if(is_plugin_active('disqus-comment-system/disqus.php')) {
+		unset( $plugins['disqus-comment-system/disqus.php'] );
+	}
+	return $plugins;
+}
