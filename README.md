@@ -1,0 +1,1 @@
+# hide-installed-plugins-from-dashboard
